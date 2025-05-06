@@ -1,0 +1,196 @@
+
+You asked for an extracurricular portfolio in HTML. Since you want a portfolio, it should showcase your projects, skills, and perhaps your extracurricular activities or experiences. The best way to present this is as a clean, modern, and mobile-responsive single HTML page that includes sections for introduction, skills, projects/experiences, and contact info.
+
+The page should have a modern look with appealing fonts and colors. It should be fully responsive to fit mobile screens (350px width and 600px height) without scrolling if possible.
+
+Plan:
+- Create a single HTML file with inline CSS and JavaScript (if needed).
+- Sections:
+  - Header with name and a short intro
+  - Skills or competencies
+  - Extracurricular projects or experiences (with descriptions)
+  - Contact or social links
+- Modern styling with a nice color palette
+- Make it mobile responsive, fitting the screen well
+- Nice typography
+
+No backend or separate files, all contained in one HTML file for easy viewing.
+
+I will now create the file content accordingly.
+
+
+`portfolio-extracurricular.html`
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Portfólio Extracurricular</title>
+<style>
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #60447e 0%, #2575fc 100%);
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 350px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    padding: 20px 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  header p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #cce1ff;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #5a94f5;
+    padding-bottom: 4px;
+    color: #aad4ff;
+  }
+  ul.skills-list, ul.projects-list {
+    list-style-type: none;
+  }
+  ul.skills-list li, ul.projects-list li {
+    margin-bottom: 10px;
+    padding-left: 12px;
+    position: relative;
+  }
+  ul.skills-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #62d961;
+  }
+  ul.projects-list li {
+    border-left: 4px solid #5a94f5;
+    padding-left: 10px;
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 5px;
+    margin-bottom: 14px;
+  }
+  .project-title {
+    font-weight: bold;
+    color: #bc89ff;
+    margin-bottom: 4px;
+  }
+  .project-desc {
+    font-size: 0.9rem;
+    color: #6d81af;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaccff;
+  }
+  a.social-link {
+    color: #89b1ff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+  a.social-link:hover {
+    color: #62d961;
+  }
+  /* Mobile Optimization */
+  @media (max-width: 400px) {
+    body {
+      padding: 15px;
+    }
+    .container {
+      padding: 15px 20px;
+      max-width: 100%;
+    }
+    header h1 {
+      font-size: 1.6rem;
+    }
+    section h2 {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Portifolio do thiago</h1>
+      <p>Portfólio de Atividades Extracurriculares</p>
+    </header>
+
+    <section aria-label="Descrição pessoal">
+      <p>Sou um(a) estudante dedicado(a) e entusiasta de aprendizado contínuo, com participação em diversos projetos e atividades extracurriculares que ampliam meu conhecimento e habilidades.</p>
+    </section>
+
+    <section aria-label="Habilidades e competências">
+      <h2>Habilidades</h2>
+      <ul class="skills-list">
+        <li>Organização e trabalho em equipe</li>
+        <li>Comunicação eficaz</li>
+        <li>Iniciativa e proatividade</li>
+        <li>Domínio básico de programação web (HTML, CSS, JS)</li>
+        <li>Gestão de projetos e eventos</li>
+      </ul>
+    </section>
+
+    <section aria-label="Projetos extracurriculares">
+      <h2>Projetos e Atividades</h2>
+      <ul class="projects-list">
+        <li>
+          <div class="project-title">Clube de Robótica</div>
+          <div class="project-desc">Desenvolvi habilidades em montagem e programação de robôs, participando de competições escolares regionais.</div>
+        </li>
+        <li>
+          <div class="project-title">Voluntariado em ONG local</div>
+          <div class="project-desc">Colaborei na organização de eventos comunitários e arrecadação de fundos para causas sociais.</div>
+        </li>
+        <li>
+          <div class="project-title">Curso online de desenvolvimento web</div>
+          <div class="project-desc">Concluí um curso de HTML, CSS e JavaScript, criando pequenos projetos práticos.</div>
+        </li>
+        <li>
+          <div class="project-title">Participação em feiras de ciências</div>
+          <div class="project-desc">Criei e apresentei projetos científicos voltados para sustentabilidade ambiental.</div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Contatos: 
+        <a href="mailto:seuemail@email.com" class="social-link" aria-label="Enviar email">Email</a> | 
+        <a href="#" class="social-link" aria-label="Perfil LinkedIn">LinkedIn</a> | 
+        <a href="#" class="social-link" aria-label="Perfil GitHub">GitHub</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
+
+```
+
