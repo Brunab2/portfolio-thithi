@@ -1,26 +1,5 @@
 
-You asked for an extracurricular portfolio in HTML. Since you want a portfolio, it should showcase your projects, skills, and perhaps your extracurricular activities or experiences. The best way to present this is as a clean, modern, and mobile-responsive single HTML page that includes sections for introduction, skills, projects/experiences, and contact info.
 
-The page should have a modern look with appealing fonts and colors. It should be fully responsive to fit mobile screens (350px width and 600px height) without scrolling if possible.
-
-Plan:
-- Create a single HTML file with inline CSS and JavaScript (if needed).
-- Sections:
-  - Header with name and a short intro
-  - Skills or competencies
-  - Extracurricular projects or experiences (with descriptions)
-  - Contact or social links
-- Modern styling with a nice color palette
-- Make it mobile responsive, fitting the screen well
-- Nice typography
-
-No backend or separate files, all contained in one HTML file for easy viewing.
-
-I will now create the file content accordingly.
-
-
-`portfolio-extracurricular.html`
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
